@@ -104,8 +104,6 @@
 
 }).call(this);
 
-var a = [1, 2, 2, 2, 2].keepIf(function(ele) { return ele > 1; });
-console.log(a);
 
 
 
