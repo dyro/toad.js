@@ -74,7 +74,6 @@
 	};
 
 	// Prototypes
-
 	// Array
 
 	Array.prototype.clear = function() {
@@ -100,7 +99,6 @@
 	String.prototype.getFirst = _getFirst;
 	String.prototype.removeIf = _removeIf;
 	String.prototype.keepIf = _keepIf;
-
 
 }).call(this);
 
