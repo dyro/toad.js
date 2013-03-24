@@ -72,8 +72,7 @@ Produces:
 
 ### removeIf()
 Returns a new array of elements containg elements that were not removed. 
-This may be a destructive operation in the future; I haven't decided which way I like more. 
-
+*This may become a destructive operation in the future*.
 ```javascript
 var a = [1, 2, 3, 4, 5].removeIf(function(element){
 	return element > 3;
@@ -87,7 +86,7 @@ Produces:
 
 ### keepIf()
 Returns a new array of elements that were kept after this operation.
-This may be a destructive operation in the future; I haven't decided which way I like more. 
+*This may become a destructive operation in the future*.
 
 ```javascript
 var a = [1, 2, 3, 4, 5].keepIf(function(element){
@@ -100,8 +99,16 @@ Produces:
 [1, 2, 3]
 ```
 
-
-
+### Chaining Functions
+You can also do cool stuff like this: 
+```javascript
+var a = [1, 2, 3, 4, 5, 6, 7].keepIf(function(e){ return e > 2; }).getFirst(2);
+console.log(a);
+```
+Produces: 
+```
+[3, 4]
+```
 
 
 
