@@ -80,12 +80,12 @@
 		return this.filter(function() { return true; });
 	};
 
-	Array.prototype.each = _each;
+	Array.prototype.each 		  = _each;
 	Array.prototype.eachWithIndex = _eachWithIndex;
-	Array.prototype.map = _map;
-	Array.prototype.getFirst = _getFirst;
-	Array.prototype.removeIf = _removeIf;
-	Array.prototype.keepIf = _keepIf;
+	Array.prototype.map 		  = _map;
+	Array.prototype.getFirst 	  = _getFirst;
+	Array.prototype.removeIf 	  = _removeIf;
+	Array.prototype.keepIf        = _keepIf;
 
 	// String
 
@@ -93,12 +93,12 @@
 		return this.split("").reverse().join("");
 	};
 
-	String.prototype.each = _each;
+	String.prototype.each          = _each;
 	String.prototype.eachWithIndex = _eachWithIndex;
-	String.prototype.map = _map;
-	String.prototype.getFirst = _getFirst;
-	String.prototype.removeIf = _removeIf;
-	String.prototype.keepIf = _keepIf;
+	String.prototype.map           = _map;
+	String.prototype.getFirst      = _getFirst;
+	String.prototype.removeIf      = _removeIf;
+	String.prototype.keepIf        = _keepIf;
 
 }).call(this);
 
