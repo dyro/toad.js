@@ -58,7 +58,7 @@
             for (var i = this.length - 1; i > (this.length-1) - len; i--) {
                 results.push(this[i]);
             }
-            return results;
+            return results.reverse();
         } else {
             return this[this.length - 1];
         };
@@ -121,4 +121,5 @@
 
 }).call(this);
 
+console.log([1, 2, 3].getLast(2));
 
