@@ -48,6 +48,14 @@
 		};
 	};
 
+    var _getLast = function() {
+        if(typeof(arguments[0]) === 'number') {
+            
+        } else {
+
+        };
+    };
+
 	// Can be used with: 
 	// Array,
 	// String
