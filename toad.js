@@ -1,10 +1,5 @@
 (function(){
 
-    Array.prototype.clear = function() {
-        return this.filter(function() { return true; });
-    };
-
-
 	// Functions used on muliple Data Types
 
 	// Can be used with: 
@@ -42,7 +37,8 @@
 	var _getFirst = function() {
 		if(typeof(arguments[0]) === 'number') {
 			var results = [];
-			for(var i = 0; i < arguments[0]; i++) {
+            var len = (arguments[0] > this.length) ? this.length : arguments[0];
+			for(var i = 0; i < len; i++) {
 				results.push(this[i]);
 			}
 			return results;
@@ -58,11 +54,11 @@
 	var _removeIf = function(callback) {
 		var results = [];
 		for (var i = 0; i < this.length; i++) {
-			if (callback(this[i])) {
+			if (!callback(this[i])) {
 				results.push(this[i]);
 			};
 		};
-		return results.clear();
+		return results;
 	};
 
 	// Can be used with: 
@@ -71,15 +67,19 @@
 	var _keepIf = function(callback) {
 		var results = [];
 	 	for (var i = 0; i < this.length; i++) {
-	 		if (!callback(this[i])) {
+	 		if (callback(this[i])) {
 	 			results.push(this[i]);
 	 		};
 	 	};
-	 	return results.clear();
-	};
+	 	return results;
+     }
 
 	// Prototypes
 	// Array
+
+    Array.prototype.clear = function() {
+        return this.filter(function() { return true; });
+    };
 
 	Array.prototype.each 		  = _each;
 	Array.prototype.eachWithIndex = _eachWithIndex;
@@ -102,4 +102,5 @@
 	String.prototype.keepIf            = _keepIf;
 
 }).call(this);
+
 
