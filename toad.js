@@ -1,5 +1,10 @@
 (function(){
 
+    Array.prototype.clear = function() {
+        return this.filter(function() { return true; });
+    };
+
+
 	// Functions used on muliple Data Types
 
 	// Can be used with: 
@@ -57,7 +62,7 @@
 				results.push(this[i]);
 			};
 		};
-		return results;
+		return results.clear();
 	};
 
 	// Can be used with: 
@@ -70,15 +75,11 @@
 	 			results.push(this[i]);
 	 		};
 	 	};
-	 	return results;
+	 	return results.clear();
 	};
 
 	// Prototypes
 	// Array
-
-	Array.prototype.clear = function() {
-		return this.filter(function() { return true; });
-	};
 
 	Array.prototype.each 		  = _each;
 	Array.prototype.eachWithIndex = _eachWithIndex;

@@ -59,7 +59,7 @@ Produces:
 1
 ```
 
-If a number is passed as a paramter, ```getFirst``` will return that many elements from the front of the array
+If a number is passed as a paramter, ```getFirst()``` will return that many elements from the front of the array.
 
 ```javascript
 var a = [1, 2, 3, 4 ,5].getFirst(3);
@@ -69,6 +69,39 @@ Produces:
 ```
 [1, 2, 3]
 ```
+
+### removeIf()
+Returns a new array of elements containg elements that were not removed. 
+This may be a destructive operation in the future; I haven't decided which way I like more. 
+
+```javascript
+var a = [1, 2, 3, 4, 5].removeIf(function(element){
+	return element > 3;
+});
+console.log(a);
+```
+Produces:
+```
+[1, 2, 3];
+```
+
+### keepIf()
+Returns a new array of elements that were kept after this operation.
+This may be a destructive operation in the future; I haven't decided which way I like more. 
+
+```javascript
+var a = [1, 2, 3, 4, 5].keepIf(function(element){
+	return element < 4;
+});
+console.log(a);
+```
+Produces:
+```
+[1, 2, 3]
+```
+
+
+
 
 
 
