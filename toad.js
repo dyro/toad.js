@@ -48,11 +48,14 @@
 		};
 	};
 
+    // Can be used with: 
+    // Array,
+    // String
     var _getLast = function() {
         if(typeof(arguments[0]) === 'number') {
             var results = [];
             var len = (arguments[0] > this.length) ? this.length : arguments[0];
-            for (var i = this.length; i > len; i--) {
+            for (var i = this.length - 1; i > (this.length-1) - len; i--) {
                 results.push(this[i]);
             }
             return results;
@@ -119,6 +122,6 @@
 }).call(this);
 
 
-console.log([1, 2, 3].getLast(2));
+console.log([1, 2, 3].getLast(1));
 
 
