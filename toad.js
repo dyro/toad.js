@@ -50,9 +50,14 @@
 
     var _getLast = function() {
         if(typeof(arguments[0]) === 'number') {
-            
+            var results = [];
+            var len = (arguments[0] > this.length) ? this.length : arguments[0];
+            for (var i = this.length; i > len; i--) {
+                results.push(this[i]);
+            }
+            return results;
         } else {
-
+            return this[this.length - 1];
         };
     };
 
@@ -93,6 +98,7 @@
 	Array.prototype.eachWithIndex = _eachWithIndex;
 	Array.prototype.map 		  = _map;
 	Array.prototype.getFirst 	  = _getFirst;
+    Array.prototype.getLast       = _getLast;
 	Array.prototype.removeIf 	  = _removeIf;
 	Array.prototype.keepIf        = _keepIf;
 
@@ -106,10 +112,13 @@
 	String.prototype.eachCharWithIndex = _eachWithIndex;
 	String.prototype.map               = _map;
 	String.prototype.getFirst          = _getFirst;
+    String.prototype.getLast           = _getLast;
 	String.prototype.removeIf          = _removeIf;
 	String.prototype.keepIf            = _keepIf;
 
 }).call(this);
 
+
+console.log([1, 2, 3].getLast(2));
 
 
