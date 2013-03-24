@@ -93,12 +93,12 @@
 		return this.split("").reverse().join("");
 	};
 
-	String.prototype.each          = _each;
-	String.prototype.eachWithIndex = _eachWithIndex;
-	String.prototype.map           = _map;
-	String.prototype.getFirst      = _getFirst;
-	String.prototype.removeIf      = _removeIf;
-	String.prototype.keepIf        = _keepIf;
+	String.prototype.eachChar          = _each;
+	String.prototype.eachCharWithIndex = _eachWithIndex;
+	String.prototype.map               = _map;
+	String.prototype.getFirst          = _getFirst;
+	String.prototype.removeIf          = _removeIf;
+	String.prototype.keepIf            = _keepIf;
 
 }).call(this);
 
