@@ -59,7 +59,7 @@ Produces:
 1
 ```
 
-If a number is passed as a paramter, ```getFirst()``` will return that many elements from the front of the array.
+If a number is passed as a paramter, ```getFirst(n)``` will return an array with ```n``` number of elements from the beginning of the original array.
 
 ```javascript
 var a = [1, 2, 3, 4 ,5].getFirst(3);
@@ -69,6 +69,29 @@ Produces:
 ```
 [1, 2, 3]
 ```
+
+### getLast()
+Returns the last element of an array.
+
+```javascript
+var a = [1, 2, 3].getLast();
+console.log(a);
+```
+Produces:
+```
+3
+```
+If a number is passed as a parameter, ```getLast(n)``` will return an array with ```n``` number of elements from the end of the original array.
+
+```javascript
+var a = [1, 2, 3, 4, 5].getLast(3);
+console.log(a);
+```
+Produces:
+```
+[3, 4, 5]
+```
+
 
 ### removeIf()
 Returns a new array of elements containg elements that were not removed. 

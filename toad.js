@@ -122,6 +122,3 @@
 }).call(this);
 
 
-console.log([1, 2, 3].getLast(1));
-
-
