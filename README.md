@@ -11,10 +11,11 @@ Calls the code in the anonymous function for each element of the array. The elem
 [1, 2, 3].each(function(element) { console.log(ele); } );
 ```
 Produces: 
-    1
-    2
-    3
-
+```
+1
+2
+3
+```
 ### eachWithIndex
 Calls the code in the anonymous function for each element of the array. The anonymous function's paramters are an index and the array's element. 
 
@@ -25,9 +26,11 @@ Calls the code in the anonymous function for each element of the array. The anon
 });
 ```
 Produces:
-    index: 0
-    element: 1
-    index: 1
-    element: 2
-    index: 2
-    element: 3
+```
+index: 0
+element: 1
+index: 1
+element: 2
+index: 2
+element: 3
+```
