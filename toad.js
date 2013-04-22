@@ -131,4 +131,4 @@
     String.prototype.removeIf          = removeIf;
     String.prototype.keepIf            = keepIf;
 
-}).call(this);
+}());
